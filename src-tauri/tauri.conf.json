@@ -11,6 +11,14 @@
     "version": "0.0.0"
   },
   "tauri": {
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://releases.myapp.com/{{target}}/{{arch}}/{{current_version}}"
+      ],
+      "dialog": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDMxNUQyNDY1OUMzNkVDMUIKUldRYjdEYWNaU1JkTVp1NVpjU1UzaW0wblpReEJEd1NSSjdxcWFKSCsvbHEwZThtTkZwbmRSZDMK"
+    },
     "allowlist": {
       "all": false,
       "shell": {
@@ -21,7 +29,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "identifier",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
