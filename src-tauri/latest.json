@@ -1,0 +1,15 @@
+{
+  "version": "v0.0.2",
+  "notes": "Test version 0.0.2",
+  "pub_date": "2023-07-31T02:25:57Z",
+  "platforms": {
+    "darwin-x86_64": {
+      "signature": "https://github.com/anamaria-progemisoft/tauri-app/releases/download/v0.0.2/tauri-app.app.tar.gz.sig",
+      "url": "https://github.com/anamaria-progemisoft/tauri-app/releases/download/v0.0.2/tauri-app.app.tar.gz"
+    },
+    "darwin-aarch64": {
+      "signature": "https://github.com/anamaria-progemisoft/tauri-app/releases/download/v0.0.2/tauri-app.app.tar.gz.sig",
+      "url": "https://github.com/anamaria-progemisoft/tauri-app/releases/download/v0.0.2/tauri-app.app.tar.gz"
+    }
+  }
+}
