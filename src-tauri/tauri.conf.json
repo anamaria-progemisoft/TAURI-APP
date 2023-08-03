@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "tauri-app",
-    "version": "0.0.74"
+    "version": "0.1.101"
   },
   "tauri": {
     "updater": {
@@ -30,7 +30,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "identifier",
+      "identifier": "identifier-101",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
