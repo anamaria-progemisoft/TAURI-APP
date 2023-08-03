@@ -36,6 +36,7 @@ app.run(|_app_handle, event| match event {
       // Emitted when the app already has the latest version installed and an update is not needed.
       tauri::UpdaterEvent::AlreadyUpToDate => {
         println!("app is already up to date");
+        dbg!(updater_event);
       }
       // Emitted when there is an error with the updater. We suggest to listen to this event even if the default dialog is enabled.
       tauri::UpdaterEvent::Error(error) => {
