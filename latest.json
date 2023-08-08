@@ -1,0 +1,11 @@
+{
+  "version": "v0.1.103",
+  "notes": "v0.1.103",
+  "pub_date": "2023-07-31T02:25:57Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTK3VxRjgwRE44TkF3c2pQd0pPWlRmc05jWXZJaWRvcHZ4NjdVL2lmWXl3YVYvdnhQNU51MWZ3TW5uL1V2aWhHaHl4U2FVd2JWb3IxQlZ4eWtQZWUwejZCNm5PSE9aTndjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjkxMDY1NDg1CWZpbGU6dGF1cmktYXBwLmFwcC50YXIuZ3oKL1BrcWg3RFgwdVpjVC9OSDh6enNxV2NTRmZ6U3JBQ3RiK2VQNzRya1BrN0FpRTJVbmdWaTZ2aU5ReUdwSkUvbHRtVmhzbEdka1lGMTROTmdHSE11QlE9PQo=",
+      "url": "https://github.com/anamaria-progemisoft/tauri-app/releases/download/v0.1.101/tauri-app.app.tar.gz"
+    }
+  }
+}
