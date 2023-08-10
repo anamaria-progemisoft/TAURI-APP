@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - v0.74
 
 jobs:
   publishtauri:
@@ -43,6 +44,7 @@ jobs:
         id: tauri
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
         with:
           tagName: v__VERSION__ # the action automatically replaces __VERSION__ with the app version
           releaseName: "v__VERSION__"
@@ -53,6 +55,7 @@ jobs:
           updaterJsonPreferNsis: true
           includeDebug: false
           includeRelease: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # update-json:
   #   runs-on: ubuntu-latest
