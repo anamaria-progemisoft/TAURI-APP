@@ -70,10 +70,11 @@ jobs:
           tag_name: v${{ env.version }}  # Specifică numele tag-ului pentru release, adăugând 'v' în față
           release_name: Release ${{ env.version }}  # Numele release-ului
           body: Auto-generated release for version ${{ env.version }}  # Corpul release-ului
-      # - uses: actions/upload-artifact@v2  # Folosește acțiunea de încărcare a unui artefact (fișiere)
-      #   with:
-      #     name: tauri-release  
-      #     path: ./path/to/tauri/release  # Calea către fișierele artefactului
+      - uses: actions/upload-artifact@v2  # Folosește acțiunea de încărcare a unui artefact (fișiere)
+        with:
+          # run: gh release upload v${{ env.version }} ./src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
+          name: tauri-release  
+          path: ./src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz  # Calea către fișierele artefactului
 
       # - name: Upload Signature  
       # - uses: actions/upload-artifact@v2  # Folosește acțiunea de încărcare a unui artefact (semnătura)
