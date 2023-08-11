@@ -57,35 +57,35 @@ jobs:
           includeRelease: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  # update-json:
-  #   runs-on: ubuntu-latest
-  #   needs: publishtauri
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v2
-  #     - name: Configure Git
-  #       run: |
-  #         git config user.name "GitHub Action"
-  #         git config user.email "action@github.com"
-  #     - name: Create or checkout branch
-  #       run: |
-  #         git checkout "update" || git checkout --orphan "update"
-  #     - name: Remove all files
-  #       run: |
-  #         git rm -rf .
-  #     - name: Fetch JSON file
-  #       env:
-  #         RELEASE_ID: ${{needs.publishtauri.outputs.releaseId}}
-  #       run: |
-  #         echo "$RELEASE_ID"
-  #         RELEASE_TAG=$(basename $RELEASE_ID)
-  #         echo "$RELEASE_TAG"
-  #         RELEASE_URL="https://github.com/skymen/construct-crawler/releases/download/$RELEASE_TAG/latest.json"
-  #         echo "$RELEASE_URL"
-  #         curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3.raw" -o latest.json -L "$RELEASE_URL"
-  #         cat latest.json
-  #     - name: Commit and push changes
-  #       run: |
-  #         git add latest.json
-  #         git commit -m "Update latest.json"
-  #         git push -u origin update --force
+  update-json:
+    runs-on: ubuntu-latest
+    needs: publishtauri
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2    # Acțiunea de checkout pentru a lua codul sursă al repo-ului
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Action"      # Configurează numele utilizatorului pentru commit
+          git config user.email "action@github.com" # Configurează adresa de email pentru commit
+      - name: Create or checkout branch
+        run: |
+          git checkout "update" || git checkout --orphan "update"  # Dacă există  comută pe branchul "update", altfel creează-o
+      - name: Remove all files
+        run: |
+          git rm -rf .  # Șterge toate fișierele din branch-ul "update"
+      - name: Fetch JSON file
+        env:
+          RELEASE_ID: ${{needs.publishtauri.outputs.releaseId}}   # Preia ID-ul release-ului din job-ul anterior
+        run: |
+          echo "$RELEASE_ID"
+          RELEASE_TAG=$(basename $RELEASE_ID)  # Obține tag-ul din ID-ul release-ului
+          echo "$RELEASE_TAG"
+          RELEASE_URL="https://github.com/anamaria-progemisoft/tauri-app/releases/download/v0.0.74/latest.json"  # Construiește URL-ul pentru fișierul JSON
+          echo "$RELEASE_URL"
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3.raw" -o latest.json -L "$RELEASE_URL" # Descarcă fișierul JSON folosind token-ul de autentificare
+          cat latest.json  # Afișează conținutul fișierului JSON
+      - name: Commit and push changes
+        run: |
+          git add latest.json
+          git commit -m "Update latest.json"
+          git push -u origin update --force
