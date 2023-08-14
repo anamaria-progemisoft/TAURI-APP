@@ -25,9 +25,11 @@ jobs:
         run: ls -a /home/runner/work/tauri-app/tauri-app
       - uses: actions/upload-release-asset@v1
         with:
+          asset_path: ${{ github.workspace }}/src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
+          asset_name: tauri-app.app.tar.gz
           # run: gh release upload v${{ env.version }} ./src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
           # name: tauri-release  
-          path: ${{ github.workspace }}/src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
+          # path: 
 
       # - name: Upload Signature  
       # - uses: actions/upload-artifact@v2  # Folosește acțiunea de încărcare a unui artefact (semnătura)
