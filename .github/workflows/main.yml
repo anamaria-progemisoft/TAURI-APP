@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/create-release@v1  # Folosește acțiunea de creare a unui release
+        id: create_release
         with:
           tag_name: v${{ env.version }}  # Specifică numele tag-ului pentru release, adăugând 'v' în față
           release_name: Release ${{ env.version }}  # Numele release-ului
@@ -25,6 +26,7 @@ jobs:
         run: ls -a /home/runner/work/tauri-app/tauri-app
       - uses: actions/upload-release-asset@v1
         with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{ github.workspace }}/src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
           asset_name: tauri-app.app.tar.gz
           # run: gh release upload v${{ env.version }} ./src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
