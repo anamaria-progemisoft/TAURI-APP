@@ -30,26 +30,11 @@ jobs:
           asset_path: ${{ github.workspace }}/src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
           asset_name: tauri-app.app.tar.gz
           asset_content_type: application/octet-stream
-          # run: gh release upload v${{ env.version }} ./src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
-          # name: tauri-release  
-          # path: 
+      - uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ github.workspace }}/src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz.sig
+          asset_name: tauri-app.app.tar.gz.sig
+          asset_content_type: application/octet-stream
 
-      # - name: Upload Signature  
-      # - uses: actions/upload-artifact@v2  # Folosește acțiunea de încărcare a unui artefact (semnătura)
-      #   with:
-      #     name: tauri-signature 
-      #     path: ./path/to/signature.sig  # Calea către semnătură
-
-      # - name: Update Version in Branch  
-      #   run: |  # Rulează o serie de comenzi în stil script
-      #     echo "${{ github.ref }}" >> version.txt  # Adaugă versiunea într-un fișier text
-      #     echo "Download: https://github.com/${{ github.repository }}/releases/download/v${{ github.ref }}/your-app-name-${{ github.ref }}.tar.gz" >> version.txt  # Adaugă URL-ul pentru descărcare în fișierul text
-      #     echo "Signature: https://github.com/${{ github.repository }}/releases/download/v${{ github.ref }}/your-app-name-${{ github.ref }}.tar.gz.sig" >> version.txt  # Adaugă URL-ul semnăturii în fișierul text
-      #     git config --global user.email "action@github.com"  # Configurează adresa de email pentru commit
-      #     git config --global user.name "GitHub Action"  # Configurează numele utilizatorului pentru commit
-      #     git add version.txt  # Adaugă fișierul în starea de 'staged'
-      #     git commit -m "Add version ${{ github.ref }} details"  # Realizează un commit          
-      #     git push origin main 
-
-      # - name: Print Release URL  
-      #   run: echo "Release URL: https://github.com/${{ github.repository }}/releases/tag/v${{ github.ref }}"  # Afișează URL-ul release-ului
+      
