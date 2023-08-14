@@ -63,7 +63,7 @@ jobs:
     needs: publishtauri
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      version: 0.0.89
+      version: 0.0.90
     steps:
       - uses: actions/create-release@v1  # Folosește acțiunea de creare a unui release
         with:
