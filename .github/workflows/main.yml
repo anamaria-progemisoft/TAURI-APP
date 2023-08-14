@@ -19,11 +19,11 @@ jobs:
           release_name: Release ${{ env.version }}  # Numele release-ului
           body: Auto-generated release for version ${{ env.version }}  # Corpul release-ului
       - name: List src-tauri folder
-        run: ls -a
+        run: ls -a /home/runner/work
       - name: List github workspace
-        run: ls -a ${{ github.workspace }}
+        run: ls -a /home/runner/work/tauri-app
       - name: List github workspace
-        run: ls -a ${{ github.workspace }}/src-tauri
+        run: ls -a /home/runner/work/tauri-app/src-tauri
       # - uses: actions/upload-artifact@v3  # Folosește acțiunea de încărcare a unui artefact (fișiere)
       #   with:
       #     # run: gh release upload v${{ env.version }} ./src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
