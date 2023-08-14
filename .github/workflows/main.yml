@@ -46,8 +46,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
         with:
-          tagName: v0.0.17 # the action automatically replaces __VERSION__ with the app version
-          releaseName: "v0.0.17"
+          tagName: v__VERSION__ # the action automatically replaces __VERSION__ with the app version
+          releaseName: "v__VERSION__"
           releaseBody: "See the assets to download this version and install."
           releaseDraft: false
           prerelease: false
@@ -56,6 +56,36 @@ jobs:
           includeDebug: false
           includeRelease: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  pdate-json:
+    runs-on: ubuntu-latest
+    needs: publishtauri
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+      - name: Create or checkout branch
+        run: |
+          git checkout "update" || git checkout --orphan "update"
+      - name: Remove all files
+        run: |
+          git rm -rf .
+      - name: Fetch JSON file
+        env:
+          RELEASE_ID: ${{needs.publishtauri.outputs.releaseId}}
+        run: |
+          echo "$RELEASE_ID"
+          RELEASE_TAG=$(basename $RELEASE_ID)
+          echo "$RELEASE_TAG"
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.v3.raw" -o latest.json -L "$RELEASE_URL"
+          cat latest.json
+      - name: Commit and push changes
+        run: |
+          git add latest.json
+          git commit -m "Update latest.json"
+          git push -u origin update --force
 
   # create-release:
   #   runs-on: ubuntu-latest

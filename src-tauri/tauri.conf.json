@@ -14,7 +14,7 @@
     "updater": {
       "active": true,
       "endpoints": [
-        "https://raw.githubusercontent.com/anamaria-progemisoft/tauri-app/config/latest.json"
+        "https://raw.githubusercontent.com/anamaria-progemisoft/tauri-app/update/latest.json"
         
       ],
       "dialog": true,
