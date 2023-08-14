@@ -13,11 +13,12 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       version: 0.0.90
     steps:
-      - uses: actions/create-release@v1  # Folosește acțiunea de creare a unui release
-        with:
-          tag_name: v${{ env.version }}  # Specifică numele tag-ului pentru release, adăugând 'v' în față
-          release_name: Release ${{ env.version }}  # Numele release-ului
-          body: Auto-generated release for version ${{ env.version }}  # Corpul release-ului
+      - uses: actions/checkout@v3
+      # - uses: actions/create-release@v1  # Folosește acțiunea de creare a unui release
+      #   with:
+      #     tag_name: v${{ env.version }}  # Specifică numele tag-ului pentru release, adăugând 'v' în față
+      #     release_name: Release ${{ env.version }}  # Numele release-ului
+      #     body: Auto-generated release for version ${{ env.version }}  # Corpul release-ului
       - name: List github workspace
         run: ls -a /home/runner/work/tauri-app
       - name: List github workspace
