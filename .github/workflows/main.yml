@@ -19,7 +19,7 @@ jobs:
           release_name: Release ${{ env.version }}  # Numele release-ului
           body: Auto-generated release for version ${{ env.version }}  # Corpul release-ului
       - name: List src-tauri folder
-        run: ls src-tauri
+        run: ls 
       - name: List github workspace
         run: ls ${{ github.workspace }}
       - uses: actions/upload-artifact@v3  # Folosește acțiunea de încărcare a unui artefact (fișiere)
