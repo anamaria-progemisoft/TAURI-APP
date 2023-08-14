@@ -29,6 +29,7 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{ github.workspace }}/src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
           asset_name: tauri-app.app.tar.gz
+          asset_content_type: application/octet-stream
           # run: gh release upload v${{ env.version }} ./src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
           # name: tauri-release  
           # path: 
