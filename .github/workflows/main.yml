@@ -74,7 +74,7 @@ jobs:
         with:
           # run: gh release upload v${{ env.version }} ./src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz
           name: tauri-release  
-          path: ./src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz  # Calea către fișierele artefactului
+          path: src-tauri/target/release/bundle/macos/tauri-app.app.tar.gz  # Calea către fișierele artefactului
 
       # - name: Upload Signature  
       # - uses: actions/upload-artifact@v2  # Folosește acțiunea de încărcare a unui artefact (semnătura)
