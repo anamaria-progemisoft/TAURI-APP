@@ -1,9 +1,5 @@
 name: "publish"
-on:
-  push:
-    branches:
-      - main
-      - v0.74
+on: push
 
 jobs:
   publishtauri:
