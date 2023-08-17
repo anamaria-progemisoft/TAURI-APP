@@ -16,9 +16,9 @@ jobs:
           - name: macOS-Apple
             target: universal-apple-darwin
             runner: macos-latest
-          # - name: Windows
-          #   target: x86_64-pc-windows-msvc
-          #   runner: windows-latest  
+          - name: Windows
+            target: x86_64-pc-windows-msvc
+            runner: windows-latest  
 
     runs-on: ${{ matrix.runner }}
 
