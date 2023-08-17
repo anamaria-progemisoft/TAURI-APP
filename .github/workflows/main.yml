@@ -34,7 +34,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Add Rust Target for macos
-        if: matrix.runner != 'macos-latest'
+        if: matrix.runner == 'macos-latest'
         run: rustup target add aarch64-apple-darwin
   
       - name: Export variable (unix)
