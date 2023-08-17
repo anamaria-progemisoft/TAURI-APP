@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "tauri-app",
-    "version": "0.0.100"
+    "version": "0.0.105"
   },
   "tauri": {
     "updater": {
