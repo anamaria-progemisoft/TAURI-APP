@@ -14,11 +14,11 @@ jobs:
       matrix:
         include:
           - name: macOS-Apple
-            target: aarch64-apple-darwin
+            target: universal-apple-darwin
             runner: macos-latest
-          - name: Windows
-            target: x86_64-pc-windows-msvc
-            runner: windows-latest  
+          # - name: Windows
+          #   target: x86_64-pc-windows-msvc
+          #   runner: windows-latest  
 
     runs-on: ${{ matrix.runner }}
 
