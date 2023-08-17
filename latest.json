@@ -1,0 +1,19 @@
+{
+  "version": "0.0.105",
+  "notes": "See the assets to download this version and install.",
+  "pub_date": "2023-08-17T11:33:13.258Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTK3VxRjgwRE44TkVrZlRIQVo1ekNJYjlaWG5lcHBWMml6Z3JtSjFnNWdEb2JJZktWa3ZBd0xKREpmOEdaYVd5QmFlUThUQlFRaGlLL3VkRjdRVS9jUlVxcXRwOWs3Q0E0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjkyMjcxOTE2CWZpbGU6dGF1cmktYXBwXzAuMC4xMDVfeDY0LXNldHVwLm5zaXMuemlwClhjOVNFejZaY1FDUHVSYUVLOEFGd3pnYlYvczhwSE9ySTM2a2xmZWRYSDNwRXJJSy9yeVByWmxmOVhPSjVUSEkveFRmVE5oWWxQc1d5TFdnL3lIV0FBPT0K",
+      "url": "https://github.com/anamaria-progemisoft/tauri-app/releases/download/v0.0.105/tauri-app_0.0.105_x64-setup.nsis.zip"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTK3VxRjgwRE44TkErUm1idVpoSE5xNDhNU0xka3FIUUNQb0NmbktVM0VhTTVYRHgxV2FuZ2dVUmpKS3g2Wkl5c1JYTEdPTnA1d2FyQUtEMlZuZDZuUzU0T1g2V09JUGdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjkyMjcxOTkwCWZpbGU6dGF1cmktYXBwLmFwcC50YXIuZ3oKVWczcEpZbThhSUxtR2lOaWFUL3ZnbmRnZkpXNlRCckNkQXpRb0hMTUNhYjJWK21laktPcUhDVCtlSTVhdWh4bnNCRmFVVUp6eEtvL3R3YU1FTTVLQVE9PQo=",
+      "url": "https://github.com/anamaria-progemisoft/tauri-app/releases/download/v0.0.105/tauri-app_universal.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTK3VxRjgwRE44TkErUm1idVpoSE5xNDhNU0xka3FIUUNQb0NmbktVM0VhTTVYRHgxV2FuZ2dVUmpKS3g2Wkl5c1JYTEdPTnA1d2FyQUtEMlZuZDZuUzU0T1g2V09JUGdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjkyMjcxOTkwCWZpbGU6dGF1cmktYXBwLmFwcC50YXIuZ3oKVWczcEpZbThhSUxtR2lOaWFUL3ZnbmRnZkpXNlRCckNkQXpRb0hMTUNhYjJWK21laktPcUhDVCtlSTVhdWh4bnNCRmFVVUp6eEtvL3R3YU1FTTVLQVE9PQo=",
+      "url": "https://github.com/anamaria-progemisoft/tauri-app/releases/download/v0.0.105/tauri-app_universal.app.tar.gz"
+    }
+  }
+}
